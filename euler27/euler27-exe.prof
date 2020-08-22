@@ -1,0 +1,57 @@
+	Sat Aug 22 18:44 2020 Time and Allocation Profiling Report  (Final)
+
+	   euler27-exe +RTS -N -p -RTS
+
+	total time  =        4.20 secs   (16796 ticks @ 1000 us, 4 processors)
+	total alloc = 6,374,343,632 bytes  (excludes profiling overheads)
+
+COST CENTRE   MODULE    SRC                   %time %alloc
+
+isPrime       Main      app/Main.hs:19:1-86    57.9   13.9
+isPrime.\     Main      app/Main.hs:19:34-45   19.8    0.0
+sizePrimeSeq  Main      app/Main.hs:28:1-41    11.2   21.6
+suite         Main      app/Main.hs:25:1-44     4.4   51.5
+suite.\       Main      app/Main.hs:25:25-37    3.3    8.5
+isPrime.\     Main      app/Main.hs:19:67-77    2.4    1.7
+domainCoefs.\ Main      app/Main.hs:40:41-77    0.3    1.2
+
+
+                                                                                         individual      inherited
+COST CENTRE           MODULE                SRC                       no.     entries  %time %alloc   %time %alloc
+
+MAIN                  MAIN                  <built-in>                151          0    0.0    0.0   100.0  100.0
+ CAF                  GHC.Conc.Signal       <entire-module>           263          0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding       <entire-module>           252          0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Encoding.Iconv <entire-module>           250          0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Handle.FD      <entire-module>           242          0    0.0    0.0     0.0    0.0
+ CAF                  GHC.IO.Handle.Text    <entire-module>           240          0    0.0    0.0     0.0    0.0
+ CAF                  GHC.Event.Thread      <entire-module>           204          0    0.0    0.0     0.0    0.0
+ CAF                  GHC.Event.Poll        <entire-module>           169          0    0.0    0.0     0.0    0.0
+ CAF:main             Main                  app/Main.hs:9:1-4         301          0    0.0    0.0     0.0    0.0
+  main                Main                  app/Main.hs:(9,1)-(10,19) 302          1    0.0    0.0     0.0    0.0
+ CAF:main1            Main                  <no location info>        300          0    0.0    0.0   100.0  100.0
+  main                Main                  app/Main.hs:(9,1)-(10,19) 304          0    0.0    0.0   100.0  100.0
+   res                Main                  app/Main.hs:43:1-101      305          1    0.2    0.3   100.0  100.0
+    res.\             Main                  app/Main.hs:43:32-82      315     671663    0.1    0.0    99.3   98.0
+     sizePrimeSeqCoef Main                  app/Main.hs:31:1-50       316    1343326    0.3    0.7    99.2   98.0
+      suite           Main                  app/Main.hs:25:1-44       319    1343326    4.4   51.5     7.7   60.0
+       suite.\        Main                  app/Main.hs:25:25-37      322   33884204    3.3    8.5     3.3    8.5
+      sizePrimeSeq    Main                  app/Main.hs:28:1-41       318          0   11.2   21.6    91.3   37.2
+       isPrime        Main                  app/Main.hs:19:1-86       320   33884204   57.9   13.9    80.1   15.6
+        isPrime.\     Main                  app/Main.hs:19:67-77      321  346814727    2.4    1.7     2.4    1.7
+        isPrime.\     Main                  app/Main.hs:19:34-45      324  314273849   19.8    0.0    19.8    0.0
+    domainCoefs       Main                  app/Main.hs:40:1-77       306          1    0.1    0.6     0.4    1.8
+     domainCoefs.\    Main                  app/Main.hs:40:41-77      307       1999    0.3    1.2     0.3    1.2
+      domainCoefs.\.\ Main                  app/Main.hs:40:53-57      313     671664    0.0    0.0     0.0    0.0
+      boundedPrime    Main                  app/Main.hs:37:1-81       308          1    0.0    0.0     0.0    0.0
+       boundedPrime.\ Main                  app/Main.hs:37:33-36      323        168    0.0    0.0     0.0    0.0
+       boundedPrime'  Main                  app/Main.hs:34:1-46       309          1    0.0    0.0     0.0    0.0
+ CAF:premier          Main                  app/Main.hs:16:1-7        298          0    0.0    0.0     0.0    0.0
+  premier             Main                  app/Main.hs:16:1-21       310          1    0.0    0.0     0.0    0.0
+   prime              Main                  app/Main.hs:13:1-57       311        169    0.0    0.0     0.0    0.0
+    prime.\           Main                  app/Main.hs:13:40-51      314      15813    0.0    0.0     0.0    0.0
+ CAF:premier1         Main                  <no location info>        297          0    0.0    0.0     0.0    0.0
+  premier             Main                  app/Main.hs:16:1-21       312          0    0.0    0.0     0.0    0.0
+ CAF:sizePrimeSeq     Main                  app/Main.hs:28:1-12       299          0    0.0    0.0     0.0    0.0
+  sizePrimeSeq        Main                  app/Main.hs:28:1-41       317          1    0.0    0.0     0.0    0.0
+ main                 Main                  app/Main.hs:(9,1)-(10,19) 303          0    0.0    0.0     0.0    0.0
